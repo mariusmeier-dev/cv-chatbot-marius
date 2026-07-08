@@ -1,11 +1,28 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 
-const KATEGORIE_HINWEISE = {
-  projekte: "Erzähl mir etwas zu Marius' Projekten.",
-  arbeitsweise: "Wie arbeitet Marius? Was zeichnet seine Arbeitsweise aus?",
-  persoenlichkeit: "Was für ein Mensch ist Marius? Erzähl mir etwas zu seiner Persönlichkeit.",
-};
+const START_VORSCHLAEGE = [
+  {
+    label: "Fragen Sie mich zu Marius' Projekten",
+    message: "Erzählen Sie mir etwas zu Marius' Projekten.",
+  },
+  {
+    label: "Fragen Sie mich zu Marius' Arbeitsweise",
+    message: "Wie arbeitet Marius? Was zeichnet seine Arbeitsweise aus?",
+  },
+  {
+    label: "Fragen Sie mich zu Marius' Persönlichkeit",
+    message: "Was für ein Mensch ist Marius? Erzählen Sie mir etwas zu seiner Persönlichkeit.",
+  },
+  {
+    label: "Was macht Marius in der Freizeit?",
+    message: "Was macht Marius in der Freizeit?",
+  },
+  {
+    label: "Was war Marius' Anteil an den Turnaround-Projekten?",
+    message: "Was war Marius' Anteil an den Turnaround-Projekten?",
+  },
+];
 
 export default function App() {
   const [messages, setMessages] = useState([]);
@@ -45,16 +62,12 @@ export default function App() {
       const data = await response.json();
       setMessages([...newMessages, { role: "assistant", content: data.answer }]);
     } catch (e) {
-      setError("Es gab ein Problem beim Abrufen der Antwort. Bitte versuch es gleich nochmal.");
+      setError("Es gab ein Problem beim Abrufen der Antwort. Bitte versuchen Sie es gleich nochmal.");
       setMessages(newMessages);
     } finally {
       setLoading(false);
       setTimeout(() => inputRef.current?.focus(), 50);
     }
-  }
-
-  function handleKategorieClick(kategorie) {
-    sendMessage(KATEGORIE_HINWEISE[kategorie]);
   }
 
   function handleSubmit(e) {
@@ -81,33 +94,28 @@ export default function App() {
         >
           {messages.length === 0 && (
             <div className="space-y-6">
-              <div className="bg-white rounded-lg border border-stone-200 p-5">
+              <div className="bg-white rounded-lg border border-stone-200 p-5 space-y-3">
                 <p className="text-stone-800 leading-relaxed">
                   Hallo, ich beantworte gerne Fragen zu Marius Meier, seiner
-                  Erfahrung, seiner Arbeitsweise und seinen Projekten. Frag
-                  einfach frei drauf los, oder wähl eine der Richtungen unten
-                  als Einstieg.
+                  Erfahrung, seiner Arbeitsweise und seinen Projekten. Fragen
+                  Sie einfach frei drauf los, oder wählen Sie eine der
+                  Richtungen unten als Einstieg.
+                </p>
+                <p className="text-stone-800 leading-relaxed">
+                  Marius wird sich sicher freuen, dass Sie das Tool
+                  ausprobieren. Erzählen Sie ihm davon gerne im Interview.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => handleKategorieClick("projekte")}
-                  className="px-4 py-2 text-sm bg-white border border-stone-300 rounded-full hover:bg-stone-100 transition-colors text-stone-700"
-                >
-                  Frag mich zu Marius' Projekten
-                </button>
-                <button
-                  onClick={() => handleKategorieClick("arbeitsweise")}
-                  className="px-4 py-2 text-sm bg-white border border-stone-300 rounded-full hover:bg-stone-100 transition-colors text-stone-700"
-                >
-                  Frag mich zu Marius' Arbeitsweise
-                </button>
-                <button
-                  onClick={() => handleKategorieClick("persoenlichkeit")}
-                  className="px-4 py-2 text-sm bg-white border border-stone-300 rounded-full hover:bg-stone-100 transition-colors text-stone-700"
-                >
-                  Frag mich zu Marius' Persönlichkeit
-                </button>
+                {START_VORSCHLAEGE.map((vorschlag) => (
+                  <button
+                    key={vorschlag.label}
+                    onClick={() => sendMessage(vorschlag.message)}
+                    className="px-4 py-2 text-sm bg-white border border-stone-300 rounded-full hover:bg-stone-100 transition-colors text-stone-700"
+                  >
+                    {vorschlag.label}
+                  </button>
+                ))}
               </div>
             </div>
           )}
@@ -158,7 +166,7 @@ export default function App() {
                   handleSubmit();
                 }
               }}
-              placeholder="Deine Frage zu Marius ..."
+              placeholder="Ihre Frage zu Marius ..."
               rows={1}
               disabled={loading}
               className="flex-1 resize-none rounded-lg border border-stone-300 px-4 py-3 text-[15px] focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent disabled:bg-stone-100 disabled:text-stone-400"
@@ -174,8 +182,10 @@ export default function App() {
             </button>
           </div>
           <p className="text-xs text-stone-500 mt-2">
-            Antworten basieren ausschliesslich auf einer geprüften Wissensbasis
-            über Marius Meier.
+            Diese App nutzt künstliche Intelligenz, die Fehler machen und
+            Sachverhalte verkürzt darstellen kann. Sie arbeitet auf einer
+            begrenzten Wissensbasis über Marius Meier. Bei wichtigen Fragen
+            freut sich Marius über ein persönliches Gespräch.
           </p>
         </div>
       </main>
