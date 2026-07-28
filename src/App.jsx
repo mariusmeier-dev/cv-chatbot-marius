@@ -22,6 +22,10 @@ const START_VORSCHLAEGE = [
     label: "Was war Marius' Anteil an den Turnaround-Projekten?",
     message: "Was war Marius' Anteil an den Turnaround-Projekten?",
   },
+  {
+    label: "Welche internen Weiterbildungen hat Marius gemacht?",
+    message: "Welche internen Weiterbildungen hat Marius gemacht?",
+  },
 ];
 
 export default function App() {

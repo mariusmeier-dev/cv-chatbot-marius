@@ -5,3 +5,7 @@
 
 [functions]
   included_files = ["wissensbasis.md"]
+
+[dev]
+  framework = "vite"
+  targetPort = 5190

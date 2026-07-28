@@ -190,6 +190,21 @@ Lean in der Praxis: 5S, KVP, Gemba Walks, Shopfloor-Meetings, Reifegrad-Analyse 
 Agile Methodik punktuell: ein Projekt mit Sprint-Methodik, Mitleitung eines Design-Thinking-Kurses, Certified SAFe 5 Agilist.
 Change Management, Stakeholder-Management, Eskalation auf C-Level.
 
+### Interne Weiterbildungen (Migros Industrie AG)
+
+Als Unternehmensberater bei der Migros Industrie AG besuchte das Team zweimal jährlich zweitägige Schulungen mit externen Trainern. Zusätzlich stand das gesamte individuelle Weiterbildungsangebot der Migros Industrie offen, ergänzt durch Leadership-Trainings, um die Führungslogik der Stakeholder zu verstehen, sowie durch Trainings, die Teammitglieder selbst in der Industrie durchführten.
+
+Führung: M.A.L. (Migros Advanced Leadership), das interne Migros-Training zu Mission, Vision und Führung, sowie ein Kommunikationstraining für Führungskräfte.
+Rhetorik und Kommunikation: Rhetorik, unter anderem mit René Bornabus (bekannter Rhetoriktrainer, unter anderem Redenschreiber für Angela Merkel), dazu Think Storyline sowie Moderation und Facilitation.
+Verhandlung und gewaltfreie Kommunikation: Verhandlungstraining und ein Training zu gewaltfreier Kommunikation.
+Coaching und Persönlichkeitsentwicklung: Coaching sowie Gallup Strengths.
+Visualisierung und Kreativität: Visualisierung und Creability.
+Agile Transformation und Design Thinking: Agile Methoden, SAFe-Zertifizierung, Customer-Centricity und Design Thinking.
+Business und Strategie: Business Model Excellence sowie Change Management und Transformation.
+Projektmanagement: GDPM und Advanced Project Management.
+Lean und Operational Excellence: Lean, KVP (Kontinuierlicher Verbesserungsprozess), SMED und 5S.
+Tools: Power BI.
+
 ### Tools und Technologie
 
 Excel inklusive Makros: fortgeschritten, in MS 365.
