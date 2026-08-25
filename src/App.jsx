@@ -26,6 +26,10 @@ const START_VORSCHLAEGE = [
     label: "Welche internen Weiterbildungen hat Marius gemacht?",
     message: "Welche internen Weiterbildungen hat Marius gemacht?",
   },
+  {
+    label: "Was macht Marius aktuell im Familienunternehmen?",
+    message: "Was macht Marius aktuell im Familienunternehmen?",
+  },
 ];
 
 export default function App() {

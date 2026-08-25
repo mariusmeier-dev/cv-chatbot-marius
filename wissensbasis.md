@@ -151,6 +151,14 @@ Externe Projektleitung. Aufbau eines Odoo-Webshops als ERP-Anbindung und Automat
 
 Aktueller Status: Vorstudie. Messbare Ergebnisse folgen nach Projektabschluss.
 
+### Zeiterfassungstool für 300 Handwerker (Bauhof West GmbH)
+
+Im aktuellen Übergangsjahr entwickelt Marius für die Bauhof West GmbH ein Zeiterfassungstool für rund 300 Handwerker. Es ist sein aktuell grösstes Projekt im Familienunternehmen und Teil der Prozessoptimierung mit KI-Unterstützung, die er seit 2026 dort vorantreibt.
+
+Das Projekt besteht aus drei Teilen: einer möglichst einfachen Erfassungs-App für die Handwerker selbst, mit vielen Vorschlägen und bewusst wenigen Einstellungen, damit die Bedienung im Arbeitsalltag niedrigschwellig bleibt. Dazu ein Steuerungstool für die Abteilungsleiter, über das sie den Überblick behalten, unter anderem über Stundensaldi. Und ein HR-Portal für die Lohnbuchhaltung, damit dort nachvollziehbar ist, wie viele Stunden gebucht wurden, und die Einstellungen einfacher verwaltet werden können.
+
+Dazu kommen zwei Schnittstellen zu den internen ERP-Systemen: eine zum HR-System und eine zum Unternehmenssystem, das auch im Controlling verwendet wird.
+
 ---
 
 ## Eigene KI- und Automatisierungsarbeit
@@ -158,6 +166,10 @@ Aktueller Status: Vorstudie. Messbare Ergebnisse folgen nach Projektabschluss.
 ### Eigenentwickeltes KI-Tool für Technologie-Screening
 
 Kontinuierliches Technologie-Screening für einen definierten Fachbereich, Umfang: 10 Lieferanten, 3 Messen, 5 Fachmagazine, insgesamt rund 340 Artikel. Ziel ist, die wichtigsten Informationen auf die konkreten Bedürfnisse verdichtet in einer einzigen Quelle bereitzustellen. Stack: Python und Claude API. Kosten pro Abfrage rund 11 Rappen, ersetzt rund 1,5 Stunden manuelle Recherche, spart pro Jahr rund zwei Arbeitstage. Praktische KI-Anwendung mit messbarem Kosteneffekt, zeigt eigenständige Tool-Entwicklung.
+
+### Anonymisierungs-Pipeline mit lokaler KI auf eigenem VPS
+
+Marius betreibt auf einem externen VPS eine lokal gehostete Open-Source-KI (Ollama). Damit anonymisiert er sensible Daten, sowohl private als auch aus dem Familienunternehmen Bauhof West GmbH, bevor er sie mit einer leistungsstarken Cloud-KI wie Claude weiterverarbeitet. Das Prinzip: Die sensiblen Informationen werden zuerst lokal anonymisiert, erst der anonymisierte Datensatz geht anschliessend an die externe KI zur Interpretation und Auswertung. So kann er die Analysefähigkeit grosser KI-Modelle nutzen, ohne dass sensible Daten das eigene System verlassen. Zeigt eine praktische, selbst gebaute Lösung für den Spannungsbogen zwischen Datenschutz und KI-Nutzung.
 
 ### Prozessautomatisierung im Controlling
 
